@@ -1,8 +1,13 @@
 import React from "react";
+import MarkdownContextProvider from "./contexts/MarkdownContext";
+import MarkdownEditor from "./components/MarkdownEditor";
+import MarkdownPreviewer from "./components/MarkdownPreviewer";
 
 export default () => (
-  <>
-    <h1>Welcome to React Parcel Micro App!</h1>
-    <p>Hard to get more minimal than this React app.</p>
-  </>
+  <div className="App">
+    <MarkdownContextProvider>
+      <MarkdownEditor />
+      <MarkdownPreviewer/>
+    </MarkdownContextProvider>
+  </div>
 );
