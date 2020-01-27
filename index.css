@@ -1,0 +1,211 @@
+/* Varoiables */
+:root {
+  /* --primary: #e58824;
+  --secondary: #a12c0a;
+  --tertiary: #d64c2a; */
+
+    --primary: #333642;
+  --secondary: #000;
+  --tertiary: #717790;
+
+    /* --primary: #000;
+  --secondary: #555;
+  --tertiary: #ddd; */
+
+}
+
+/* Reset  */
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* Base Styles */
+body {
+  overflow-x: hidden;
+  min-width: 300px;
+}
+
+.markdown-previewer > h2,
+.markdown-editor > h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1em;
+}
+
+textarea {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 16px;
+  border: 2px solid #9893d8;
+  color: #111;
+  outline: none;
+  box-sizing: border-box;
+  resize: none;
+}
+
+/* Fonts  */
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#navbar > h1,
+.markdown-previewer > h2,
+.markdown-editor > h2 {
+  font-family: "Sigmar One", cursive;
+}
+
+nav > h1 {
+  font-size: 1.2em;
+}
+
+.markdown-previewer > h2,
+.markdown-editor > h2 {
+  font-size: 1.3em;
+}
+
+footer > h3 {
+  font-size: 1em;
+}
+
+/* Mobile styles */
+body {
+  box-sizing: border-box;
+  background: var(--primary);
+  color: #fff;
+}
+.App {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+#navbar {
+  text-align: center;
+}
+
+.markdown-editor {
+  height: 50vh;
+  width: 90%;
+  padding: 10px 16px;
+  margin: auto;
+  border: 2px solid var(--secondary);
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 1px 2px 3px rgba(1, 1, 1, 0.5);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: var(--tertiary);
+}
+
+#editor {
+  height: 80%;
+  width: 100%;
+  font-size: 1.1em;
+  margin: 0 auto;
+  border: 2px solid var(--secondary);
+  background: white;
+}
+
+.markdown-previewer {
+  width: 90%;
+  margin: 20px auto auto auto;
+  padding: 10px 16px;
+  border: 2px solid var(--secondary);
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: var(--tertiary);
+  box-shadow: 1px 2px 3px rgba(1, 1, 1, 0.5);
+}
+
+.markdown-previewer > h2 {
+  text-align: center;
+}
+
+#preview {
+  width: 100%;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+#preview * {
+  box-sizing: border-box;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#preview pre {
+  background: var(--secondary);
+  padding: 5px 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+footer {
+  min-height: 50px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Tablet and Small Laptop styles */
+@media screen and (min-width: 620px) {
+}
+
+/* Laptop styles */
+@media screen and (min-width: 920px) {
+  body {
+    font-size: 18px;
+  }
+  .App {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "navbar footer"
+      "editor preview";
+    gap: 10px;
+  }
+  #navbar {
+    grid-area: navbar;
+  }
+
+  #navbar > h1 {
+    font-size: 1.5em;
+  }
+
+  .markdown-editor {
+    grid-area: editor;
+    justify-self: start;
+    align-self: start;
+    margin: 20px auto;
+    height: 80vh;
+  }
+
+  .markdown-previewer {
+    grid-area: preview;
+  }
+
+  footer {
+    grid-area: footer;
+    flex-direction: row-reverse;
+    padding: 10px 35px;
+  }
+
+  footer span {
+    font-weight: bold;
+  }
+}
+
+/* Large Desktop styles */
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}

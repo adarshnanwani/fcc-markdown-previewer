@@ -4,7 +4,8 @@ import { MarkdownContext } from "../contexts/MarkdownContext";
 const MarkdownPreviewer = () => {
   const { mdData } = useContext(MarkdownContext);
   return (
-    <div className="markdown-preview">
+    <div className="markdown-previewer">
+    <h2>Preview</h2>
       <div
         id="preview"
         dangerouslySetInnerHTML={{

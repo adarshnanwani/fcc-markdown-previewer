@@ -12,6 +12,7 @@ const MarkdownEditor = () => {
   };
   return (
     <div className="markdown-editor">
+    <h2>Editor</h2>
       <textarea
         id="editor"
         value={mdData.rawData}
